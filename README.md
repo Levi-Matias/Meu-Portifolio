@@ -1,53 +1,149 @@
-🚀 Meu Portfólio Pessoal
-Bem-vindo ao repositório do meu portfólio! Este projeto foi desenvolvido para centralizar minha trajetória, habilidades técnicas e os principais projetos que venho construindo como desenvolvedor Front-End.
+# Portfólio Online — Desafio Relâmpago
 
-👤 Sobre Mim
-Sou Levi Matias, aspirante a desenvolvedor residente em Juazeiro do Norte, Ceará. Atualmente, foco meus estudos em criar interfaces que unam funcionalidade e uma experiência de usuário (UX) fluida.
+## Contexto
 
-Este portfólio reflete meu aprendizado em:
+Este projeto foi desenvolvido como parte do **Desafio Relâmpago – HTML, CSS, UI/UX e GitHub**, cujo objetivo é criar um **portfólio online profissional** para apresentação de projetos e habilidades técnicas, aplicando boas práticas de desenvolvimento web, design e versionamento de código.
 
-Front-End: HTML5, CSS3 e Design Responsivo.
+O portfólio funciona como uma vitrine digital, demonstrando tanto competências técnicas quanto cuidado com experiência do usuário (UI/UX).
 
-Design: UI/UX e Prototipagem no Figma.
+---
 
-Ferramentas: Versionamento com Git e GitHub.
+## Objetivos do Projeto
 
-🛠️ Tecnologias Utilizadas
-O projeto foi construído utilizando tecnologias puras para consolidar a base do desenvolvimento web:
+* Desenvolver um portfólio online funcional e visualmente agradável
+* Aplicar HTML semântico e CSS puro
+* Criar um layout responsivo e acessível
+* Demonstrar organização de código e boas práticas
+* Utilizar GitHub para versionamento e GitHub Pages para publicação
 
-HTML5: Estruturação semântica.
+---
 
-CSS3: Estilização avançada (Flexbox, Grid, Animações e Media Queries).
+## Estrutura do Projeto
 
-Google Fonts: Integração das famílias Kanit, Roboto Condensed e IM Fell French Canon SC.
+```text
+Portfólio/
+├── index.html
+├── style.css
+├── assets/
+│   ├── imagens
+│   └── icones
+├── README.md
+```
 
-📂 Projetos em Destaque
-No portfólio, você encontrará detalhes sobre:
+### Descrição dos Arquivos
 
-The Soul of Blues: Um projeto focado em estética e harmonia visual.
+* **index.html**: Estrutura principal do site, utilizando tags semânticas como `header`, `main`, `section`, `article` e `footer`.
+* **style.css**: Arquivo responsável por toda a estilização do projeto, incluindo layout responsivo, animações e cuidados com acessibilidade.
+* **assets/**: Diretório destinado a imagens e recursos visuais utilizados no site.
+* **README.md**: Documentação completa do projeto.
 
-Universo Estelar: Exploração de layouts imersivos e responsividade.
+---
 
-📱 Responsividade
-O site foi desenvolvido com a metodologia responsive design, garantindo que a experiência de navegação seja excelente tanto em desktops quanto em dispositivos móveis.
+## Tecnologias Utilizadas
 
-🔧 Como Executar o Projeto
-Clone este repositório:
+* **HTML5**
 
-Bash
+  * Estrutura semântica
+  * Boas práticas de acessibilidade
 
-git clone https://github.com/Levi-Matias/seu-repositorio.git
-Navegue até a pasta do projeto.
+* **CSS3 (Puro)**
 
-Abra o arquivo index.html em seu navegador ou utilize a extensão Live Server no VS Code (configurada para a porta 5503).
+  * Flexbox
+  * Media Queries
+  * Animações com `@keyframes` e `transition`
+  * Organização modular de estilos
 
-✉️ Contato
-Sinta-se à vontade para entrar em contato comigo:
+* **Figma**
 
-LinkedIn: levi-matias
+  * Criação do protótipo de alta fidelidade
+  * Planejamento de layout e hierarquia visual
 
-Instagram: @_levimatias
+* **Git & GitHub**
 
-GitHub: Levi-Matias
+  * Versionamento de código
+  * Repositório público
+  * Deploy com GitHub Pages
 
-Desenvolvido por Levi Matias.
+---
+
+## UI/UX e Design
+
+O design do portfólio foi pensado com foco em:
+
+* Interface limpa e moderna
+* Boa hierarquia visual
+* Tipografia legível
+* Paleta de cores consistente
+* Experiência do usuário intuitiva
+
+Antes da implementação, foi desenvolvido um **protótipo no Figma**, garantindo alinhamento visual e melhor planejamento da interface.
+
+---
+
+## Acessibilidade
+
+O projeto considera princípios básicos de acessibilidade, incluindo:
+
+* Uso correto de tags semânticas
+* Contraste adequado entre texto e fundo
+* Estrutura clara para leitores de tela
+* Navegação simples e objetiva
+
+---
+
+## Responsividade
+
+O site é totalmente responsivo, adaptando-se a diferentes tamanhos de tela:
+
+* Desktop
+* Tablet
+* Dispositivos móveis
+
+Isso foi alcançado por meio de **CSS Flexbox** e **Media Queries**.
+
+---
+
+## Deploy
+
+O projeto está hospedado utilizando **GitHub Pages**.
+
+### Como acessar
+
+1. Acesse o repositório público no GitHub
+2. Utilize o link gerado pelo GitHub Pages
+
+---
+
+## Como Executar Localmente
+
+Não é necessária nenhuma dependência externa.
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+# Abra o arquivo principal
+index.html
+```
+
+---
+
+## Possíveis Melhorias Futuras
+
+* Inclusão de JavaScript para interações avançadas
+* Implementação de formulário de contato funcional
+* Melhorias adicionais de acessibilidade (ARIA)
+* Internacionalização do conteúdo
+
+---
+
+## Licença
+
+Este projeto foi desenvolvido para fins educacionais como parte de um desafio técnico. O código pode ser reutilizado para estudos, desde que sejam atribuídos os devidos créditos.
+
+---
+
+## Autor
+
+Desenvolvido por **Levi Matias**
+

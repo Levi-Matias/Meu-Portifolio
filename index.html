@@ -1,86 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Levi.Matias</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<<<<<<< HEAD
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Kanit&family=Roboto+Condensed&display=swap" rel="stylesheet">
-=======
-    <link
-        href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Kanit&family=Roboto+Condensed&display=swap"
-        rel="stylesheet">
+    <meta name="description" content="Portfólio de Levi Matias - Desenvolvedor Web">
+    <title>Portfólio - Levi Matias</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Roboto+Condensed:wght@400;500;700&display=swap"
         rel="stylesheet">
->>>>>>> html
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="navbar">
-        <div class="logo">&lt;Levi.Matias&gt;</div>
+    <!-- Adicionada tag semântica header -->
+    <header class="navbar" role="banner">
+        <div class="logo" aria-label="Logo Levi Matias">&lt;Levi.Matias&gt;</div>
         <h1 class="portfolio-title">Portfólio</h1>
-        <nav>
+        <nav role="navigation" aria-label="Navegação principal">
             <ul class="nav-links">
                 <li><a href="#apresentacao">Apresentação</a></li>
+                <li><a href="#aboutme">Sobre Mim</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contatos">Contatos</a></li>
             </ul>
         </nav>
+        <!-- Adicionado botão hamburguer para mobile -->
+        <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <main>
-<<<<<<< HEAD
-        <section id="apresentacao" class="section apresentacao">
-            <h2 class="section-title">APRESENTAÇÃO</h2>
-
-            <div class="apresentacao-content">
-                <img class="photo-circle" src="foto.jpeg" alt="Foto de Levi Matias">
-
-                <article class="text-box">
-                    <p>
-                        Meu nome é Levi Matias, tenho 23 anos e moro em Juazeiro do Norte, Ceará. Sou um desenvolvedor
-                        iniciante, apaixonado por tecnologia e motivado a aprender continuamente. Estou dando meus primeiros
-                        passos na área de desenvolvimento com foco em criar soluções bem estruturadas, funcionais e
-                        visualmente agradáveis.
-                    </p>
-                    <p>
-                        Até o momento, venho construindo uma base sólida em boas práticas com Git, entendendo a importância
-                        do versionamento de código e do trabalho colaborativo. Também tenho conhecimentos em UI/UX, com
-                        atenção à experiência do usuário, além de prototipagem no Figma, onde transformo ideias em
-                        interfaces claras e organizadas antes da implementação.
-                    </p>
-                    <p>
-                        No desenvolvimento front-end, possuo experiência com HTML e CSS, criando layouts responsivos e bem
-                        estruturados. Estou em constante evolução, buscando aprimorar minhas habilidades técnicas e
-                        conceituais para crescer como desenvolvedor e contribuir de forma cada vez mais eficiente em
-                        projetos futuros.
-                    </p>
-                </article>
-            </div>
-
-            <a href="#projetos" class="arrow-down" aria-label="Ir para projetos">
-=======
-        <section id="apresentacao" class="section-apresentacao">
-            <div class="apresentacao-content">
-                <div class="apresentacao-content-img">
-                    <img class="photo-circle" src="foto.jpeg" alt="Foto de Levi Matias">
-                </div>
+        <section id="apresentacao" class="section-apresentacao" aria-labelledby="apresentacao-heading">
+            <article class="apresentacao-content">
+                <figure class="apresentacao-content-img">
+                    <img class="photo-circle" src="foto.jpeg" alt="Foto de perfil de Levi Matias">
+                </figure>
                 <div class="apresentacao-content-text">
-                    <h1>
+                    <h2 id="apresentacao-heading">
                         Olá, sou Levi Matias!
-                    </h1>
-
+                    </h2>
+                    <p class="apresentacao-subtitle">
+                        Um desenvolvedor em desenvolvimento.
+                    </p>
                     <div class="apresentacao-content-text-contact">
-                        <p>
-                            Um desenvolvedor em desenvolvimento.
-                        </p>
                         <a href="https://www.linkedin.com/in/levi-matias/" class="social-link" target="_blank"
-                            rel="noopener noreferrer" aria-label="Visitar LinkedIn">
+                            rel="noopener noreferrer" aria-label="Visitar perfil no LinkedIn">
                             <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path
                                     d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
@@ -88,7 +57,7 @@
                         </a>
 
                         <a href="https://github.com/Levi-Matias" class="social-link" target="_blank"
-                            rel="noopener noreferrer" aria-label="Visitar GitHub">
+                            rel="noopener noreferrer" aria-label="Visitar perfil no GitHub">
                             <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path
                                     d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
@@ -96,7 +65,7 @@
                         </a>
 
                         <a href="https://www.instagram.com/_levimatias/" class="social-link" target="_blank"
-                            rel="noopener noreferrer" aria-label="Visitar Instagram">
+                            rel="noopener noreferrer" aria-label="Visitar perfil no Instagram">
                             <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path
                                     d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
@@ -104,90 +73,36 @@
                         </a>
                     </div>
                 </div>
+            </article>
 
-            </div>
-            <a href="#aboutme" class="arrow-down" aria-label="Ir para sobre mim">
->>>>>>> html
+            <a href="#aboutme" class="arrow-down" aria-label="Ir para seção sobre mim">
                 <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 16l-6-6h12z" />
                 </svg>
             </a>
-<<<<<<< HEAD
         </section>
 
-        <section id="projetos" class="section projetos">
-            <h2 class="section-title">PROJETOS</h2>
-
-            <p class="projetos-subtitle">
-                Explore alguns dos projetos que desenvolvi, aplicando os conhecimentos e as tecnologias que venho aprendendo
-                ao longo da minha jornada.
-            </p>
-
-            <div class="projetos-grid">
-                <article class="project-card">
-                    <a href="https://levi-matias.github.io/The-Soul-of-Blues/" target="_blank" rel="noopener noreferrer">
-                        <h3>The Soul of Blues</h3>
-                        <div class="card-content">
-                            <img src="thesoulofblues.png" alt="Capa do projeto The Soul of Blues">
-                        </div>
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <a href="https://levi-matias.github.io/universoestelar/" target="_blank" rel="noopener noreferrer">
-                        <h3>Universo Estelar</h3>
-                        <div class="card-content">
-                            <img src="universo_estelar_card.png" alt="Capa do projeto Universo Estelar">
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contatos" class="section contatos">
-        <a href="https://www.linkedin.com/in/levi-matias/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visitar LinkedIn">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-            </svg>
-            <span>LinkedIn</span>
-        </a>
-
-        <a href="https://github.com/Levi-Matias" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visitar GitHub">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
-            </svg>
-            <span>GitHub</span>
-        </a>
-
-        <a href="https://www.instagram.com/_levimatias/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
-            </svg>
-            <span>Instagram</span>
-        </a>
-=======
-
-        </section>
-        <section id="aboutme" class="section-aboutme">
-            <h2>Sobre mim</h2>
+        <section id="aboutme" class="section-aboutme" aria-labelledby="aboutme-heading">
+            <h2 id="aboutme-heading">Sobre mim</h2>
             <div class="card-area">
-                <div class="card-aboutme">
-                    <div class="card-aboutme-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <article class="card-aboutme">
+                    <div class="card-aboutme-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div>
                         <h3>Quem sou eu</h3>
                         <p>Me chamo Levi Matias, tenho 23 anos e moro em Juazeiro, Ceará. Sou interessado na área de
                             tecnologia e estou em constante busca por aprendizado e evolução profissional.</p>
                     </div>
-                </div>
-                <div class="card-aboutme">
-                    <div class="card-aboutme-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-code-asterisk">
+                </article>
+
+                <article class="card-aboutme">
+                    <div class="card-aboutme-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M6 19a2 2 0 0 1 -2 -2v-4l-1 -1l1 -1v-4a2 2 0 0 1 2 -2" />
                             <path d="M12 11.875l3 -1.687" />
@@ -197,81 +112,118 @@
                             <path d="M12 8.5v3.375" />
                             <path d="M12 11.875l-3 1.688" />
                             <path d="M18 19a2 2 0 0 0 2 -2v-4l1 -1l-1 -1v-4a2 2 0 0 0 -2 -2" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div>
                         <h3>Tecnologias</h3>
                         <p>Atualmente, tenho conhecimentos em Git, Figma, HTML e CSS. Utilizo essas tecnologias para
                             versionamento de código, criação de interfaces e desenvolvimento de páginas web.</p>
                     </div>
-                </div>
-                <div class="card-aboutme">
-                    <div class="card-aboutme-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-bulb">
+                </article>
+
+                <article class="card-aboutme">
+                    <div class="card-aboutme-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
                             <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
                             <path d="M9.7 17l4.6 0" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div>
                         <h3>Curiosidades</h3>
-                        <p>Sou apaixonado por tecnologia e sempre tive interesse em entender como as coisas
-                            funcionam. Já realizei um curso de mecânica, o que reforçou meu gosto por
-                            soluções técnicas.</p>
+                        <p>Sou apaixonado por tecnologia e sempre tive interesse em entender como as coisas funcionam.
+                            Já realizei um curso de mecânica, o que reforçou meu gosto por soluções técnicas.</p>
                     </div>
-                </div>
+                </article>
             </div>
-            <a href="#projetos" class="arrow-down" aria-label="Ir para sobre mim">
+
+            <a href="#projetos" class="arrow-down" aria-label="Ir para seção de projetos">
                 <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 16l-6-6h12z" />
                 </svg>
             </a>
         </section>
 
+        <section id="projetos" class="section-projetos" aria-labelledby="projetos-heading">
+            <h2 id="projetos-heading">Projetos</h2>
 
-
-
-        <section id="projetos" class="section-projetos">
-            <h2>Projetos</h2>
             <div class="project-grid">
-                <a href="https://levi-matias.github.io/The-Soul-of-Blues/" target="_blank" rel="noopener noreferrer">
-                    <div class="project-card">
-
-                        <img class="card-thumbnail" src="thesoulofblues.png" alt="Capa do projeto The Soul of Blues">
+                <article class="project-card">
+                    <a href="https://levi-matias.github.io/The-Soul-of-Blues/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver projeto The Soul of Blues">
+                        <img class="card-thumbnail" src="thesoulofblues.png"
+                            alt="Captura de tela do projeto The Soul of Blues">
                         <div class="card-overlay"></div>
                         <div class="card-content">
                             <div class="card-content-title">
                                 <h3>The Soul of Blues</h3>
                             </div>
                         </div>
+                    </a>
+                </article>
 
-                    </div>
-                </a>
-                <a href="https://levi-matias.github.io/universoestelar/" target="_blank" rel="noopener noreferrer"></a>
-                <div class="project-card">
-                    <img class="card-thumbnail" src="universo_estelar_card.png" alt="Capa do projeto Universo Estelar">
-                    <div class="card-overlay"></div>
-                    <div class="card-content">
-                        <div class="card-content-title">
-                            <h3>Universo Estelar</h3>
+                <article class="project-card">
+                    <a href="https://levi-matias.github.io/universoestelar/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver projeto Universo Estelar">
+                        <img class="card-thumbnail" src="universo_estelar_card.png"
+                            alt="Captura de tela do projeto Universo Estelar">
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <div class="card-content-title">
+                                <h3>Universo Estelar</h3>
+                            </div>
                         </div>
-                    </div>
-
-                </div>
-                </a>
+                    </a>
+                </article>
             </div>
 
             <p class="project-subtitle">
                 Explore alguns dos projetos que desenvolvi, aplicando os conhecimentos e as tecnologias que venho
-                aprendendo
-                ao longo da minha jornada.
+                aprendendo ao longo da minha jornada.
             </p>
         </section>
     </main>
-    <footer class="footer">
+
+    <footer class="footer" role="contentinfo">
         <p>&copy; 2025 made by Levi Matias</p>
->>>>>>> html
     </footer>
+
+    <script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const body = document.body;
+
+        mobileMenuToggle.addEventListener('click', () => {
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+
+            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+
+            navLinks.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 </body>
+
 </html>

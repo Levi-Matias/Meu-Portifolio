@@ -4,20 +4,19 @@
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-=======
 :root {
   --DarkAmethyst: #231942;
   --DustGrape: #5e548e;
-  --AmethystSmoke: #9F86C0;
+  --AmethystSmoke: #9f86c0;
   --Lilac: #be95c4;
-  --PinkOrchid: #E0B1CB;
+  --PinkOrchid: #e0b1cb;
   --FonteRoboto: "Roboto Condensed", sans-serif;
+  --FonteKanit: "Kanit", sans-serif;
 }
 
->>>>>>> html
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -25,6 +24,7 @@ body {
   color: #fff;
   background: #000;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 .navbar {
@@ -48,7 +48,8 @@ body {
   font-weight: 600;
   color: #fff;
   letter-spacing: 1px;
-  font-family: "Kanit", sans-serif;
+  font-family: var(--FonteKanit);
+  flex-shrink: 0;
 }
 
 .portfolio-title {
@@ -59,7 +60,7 @@ body {
   font-weight: 700;
   color: #fff;
   letter-spacing: 2px;
-  font-family: "Kanit", sans-serif;
+  font-family: var(--FonteKanit);
 }
 
 .nav-links {
@@ -75,7 +76,7 @@ body {
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--FonteRoboto);
 }
 
 .nav-links a::after {
@@ -97,28 +98,75 @@ body {
   width: 100%;
 }
 
-<<<<<<< HEAD
-.section {
-  min-height: 100vh;
-=======
-/* 
-AQUI COMEÇA A MAIN
-**/
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
 
-/* Apresentação */
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  background: rgba(26, 26, 26, 0.98);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 300px;
+  padding: 24px;
+  gap: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
+}
 
 .section-apresentacao {
->>>>>>> html
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-  padding: 0;
-  position: relative;
-=======
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: var(--DarkAmethyst);
+  padding: 80px 20px 60px;
 }
 
 .apresentacao-content {
@@ -126,98 +174,64 @@ AQUI COMEÇA A MAIN
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-inline: 30%;
   gap: 60px;
-}
-
-.apresentacao-content-text {
-  width: 570px;
-  text-wrap: nowrap;
-
-  h1 {
-    font-size: 50px;
-    text-transform: capitalize;
-    color: var(--PinkOrchid);
-  }
->>>>>>> html
-}
-
-.section-title {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  position: absolute;
-  top: 60px;
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-.apresentacao {
-  background: #2d0320;
-}
-
-<<<<<<< HEAD
-.apresentacao-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 360px;
+  max-width: 1400px;
   width: 100%;
 }
 
-.photo-circle {
-  width: 390px;
-  height: 390px;
-  border-radius: 50%;
-  background: #d3d3d3;
+.apresentacao-content-text {
+  max-width: 570px;
+}
+
+.apresentacao-content-text h2 {
+  font-size: 50px;
+  text-transform: capitalize;
+  color: var(--PinkOrchid);
+  margin-bottom: 16px;
+  font-family: var(--FonteKanit);
+  line-height: 1.2;
+}
+
+.apresentacao-subtitle {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.apresentacao-content-img {
   flex-shrink: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+}
+
+.photo-circle {
+  border-radius: 40px;
+  width: 400px;
+  height: auto;
+  max-width: 100%;
+  transition: all 0.3s ease-in-out;
+  display: block;
 }
 
 .photo-circle:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-}
-
-.text-box {
-  background: rgba(93, 63, 106, 0.6);
-  padding: 20px;
-  border-radius: 15px;
-  width: 700px;
-}
-
-.text-box p {
-  font-size: 18px;
-  line-height: 1.8;
-  text-align: justify;
-  color: #f0f0f0;
-  letter-spacing: 0.7px;
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-.text-box p + p {
-  margin-top: 1rem;
-=======
-.apresentacao-content-img {
-  .photo-circle {
-    border-radius: 40px;
-    width: 400px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .photo-circle:hover {
-    scale: 1.07;
-    box-shadow: -4px 6px 16px 2px var(--AmethystSmoke);
-  }
+  transform: scale(1.07);
+  box-shadow: -4px 6px 16px 2px var(--AmethystSmoke);
 }
 
 .apresentacao-content-text-contact {
   display: flex;
-  align-items: left;
-  margin-top: 8px;
-  gap: 10px;
   align-items: center;
-  font-size: 20px;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.social-link {
+  color: var(--PinkOrchid);
+  transition: all 0.3s ease;
+  display: inline-flex;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  color: #4169e1;
 }
 
 @keyframes bounce {
@@ -230,23 +244,15 @@ AQUI COMEÇA A MAIN
   50% {
     transform: translateY(10px);
   }
->>>>>>> html
 }
 
 .arrow-down {
   position: absolute;
-<<<<<<< HEAD
-  bottom: 32px;
-  color: #6b5b95;
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-=======
-  bottom: 100px;
+  bottom: 40px;
   color: #6b5b95;
   transition: transform 0.3s ease, color 0.3s ease;
   cursor: pointer;
   animation: bounce 2s infinite;
->>>>>>> html
 }
 
 .arrow-down:hover {
@@ -254,70 +260,75 @@ AQUI COMEÇA A MAIN
   color: #8a7bb8;
 }
 
-<<<<<<< HEAD
-.projetos {
-  background: linear-gradient(135deg, #5b4a99 0%, #6b5bb3 100%);
-}
-
-.projetos-subtitle {
-  font-size: 20px;
-  text-align: center;
-  max-width: 550px;
-  line-height: 1.6;
-  color: #f0f0f0;
-  margin-bottom: 100px;
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-.projetos-grid {
-  display: flex;
-  justify-content: space-around;
-=======
-/*Sessão sobre mim*/
-
 .section-aboutme {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: var(--Lilac);
-  gap: 80px;
+  gap: 60px;
+  padding: 80px 20px 80px;
+  position: relative;
+}
 
-  h2 {
-    text-transform: capitalize;
-    font-size: 70px;
-    color: var(--DarkAmethyst);
-    font-weight: 700;
-  }
+.section-aboutme h2 {
+  text-transform: capitalize;
+  font-size: 70px;
+  color: var(--DarkAmethyst);
+  font-weight: 700;
+  font-family: var(--FonteKanit);
+  text-align: center;
+}
 
-  .arrow-down {
-    color: var(--DustGrape);
-    bottom: -760px;
-  }
+.section-aboutme .arrow-down {
+  color: var(--DustGrape);
+  position: relative;
+  bottom: auto;
+  margin-top: 40px;
 }
 
 .card-area {
   display: flex;
   flex-direction: row;
-  gap: 40px
+  gap: 40px;
+  max-width: 1400px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card-aboutme {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   max-width: 400px;
-  max-height: 600px;
-  height: 400px;
+  width: 100%;
+  min-height: 350px;
   padding: 30px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: var(--DustGrape);
-  gap: 10px;
+  gap: 16px;
   border-radius: 30px;
   box-shadow: 1px 6px 15px 2px #00000049;
+  transition: transform 0.3s ease;
+}
+
+.card-aboutme:hover {
+  transform: translateY(-10px);
+}
+
+.card-aboutme h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: var(--FonteRoboto);
+}
+
+.card-aboutme p {
+  line-height: 1.6;
 }
 
 .card-aboutme-icon {
@@ -328,29 +339,31 @@ AQUI COMEÇA A MAIN
   width: 80px;
   height: 80px;
   border: 3px solid var(--Lilac);
-
-  svg {
-    scale: 1.8;
-  }
+  flex-shrink: 0;
 }
 
+.card-aboutme-icon svg {
+  transform: scale(1.8);
+}
 
-/* Sessão Projetos */
 .section-projetos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 90vh;
+  min-height: 100vh;
   background-color: var(--DustGrape);
-  gap: 80px;
-  padding-top: 6%;
-  h2 {
-    text-transform: capitalize;
-    font-size: 70px;
-    color: var(--PinkOrchid);
-    font-weight: 700;
-  }
+  gap: 60px;
+  padding: 80px 20px 80px;
+}
+
+.section-projetos h2 {
+  text-transform: capitalize;
+  font-size: 70px;
+  color: var(--PinkOrchid);
+  font-weight: 700;
+  font-family: var(--FonteKanit);
+  text-align: center;
 }
 
 .project-subtitle {
@@ -358,103 +371,50 @@ AQUI COMEÇA A MAIN
   text-align: center;
   line-height: 1.6;
   color: var(--PinkOrchid);
-  font-family: "Roboto Condensed", sans-serif;
-  margin-bottom: 20px;
-  width: 700px;
-  line-height: 1.2;
-
+  font-family: var(--FonteRoboto);
+  max-width: 700px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .project-grid {
   display: flex;
   justify-content: center;
   gap: 40px;
->>>>>>> html
   align-items: center;
   flex-wrap: wrap;
-  width: 80%;
+  max-width: 1400px;
+  width: 100%;
 }
 
 .project-card {
-<<<<<<< HEAD
-  align-self: center;
-}
-
-.project-card a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.project-card h3 {
-  text-align: center;
-  margin-bottom: 16px;
-  font-size: 20px;
-  color: #fff;
-  font-weight: 600;
-  font-family: "IM Fell French Canon SC", serif;
-}
-
-.card-content {
-  width: 420px;
-  height: 420px;
-  border-radius: 30px;
-  transition: box-shadow 0.4s ease;
-  overflow: hidden;
-}
-
-.card-content img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-.project-card a:hover {
-  transform: translateY(-15px);
-}
-
-.project-card a:hover .card-content {
-  box-shadow: 0 20px 50px rgba(65, 105, 225, 0.5);
-}
-
-.contatos {
-  background: #e8e8e8;
-  flex-direction: row;
-  gap: 48px;
-  min-height: 30px;
-  padding: 0 48px;
-=======
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   height: 400px;
   background-color: white;
   overflow: hidden;
   border-radius: 30px;
   transition: all 0.3s ease-in-out;
   box-shadow: 1px 6px 15px 2px #00000049;
-  h3 {
-    font-size: 30px;
-    transition: all 0.3s ease-in-out;
-  }
 }
 
 .project-card:hover {
-  scale: 1.08;
-  h3 {
-    scale: 1.06;
-  }
+  transform: scale(1.05);
+}
+
+.project-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-content {
-  max-width: 100%;
-  max-height: 100%;
-  transition: box-shadow 0.4s ease;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .card-thumbnail {
@@ -471,13 +431,8 @@ AQUI COMEÇA A MAIN
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-        to top, 
-        rgba(0, 0, 0, 0.8) 0%,   
-        rgba(0, 0, 0, 0.5) 40%,  
-        rgba(0, 0, 0, 0) 100%   
-    );
-    z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2;
 }
 
 .card-content-title {
@@ -488,213 +443,97 @@ AQUI COMEÇA A MAIN
   padding: 20px;
   width: 100%;
   color: white;
-  max-width: 100%;
-  max-height: 100%;
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0.89) 15%, rgba(0, 0, 0, 0) 66%);
-  ;
   z-index: 3;
+}
+
+.card-content-title h3 {
+  font-size: 30px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  font-family: var(--FonteKanit);
+}
+
+.project-card:hover .card-content-title h3 {
+  transform: scale(1.06);
 }
 
 .footer {
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 20px;
   background-color: var(--DarkAmethyst);
   color: var(--DustGrape);
->>>>>>> html
+  font-family: var(--FonteRoboto);
 }
 
-.social-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-<<<<<<< HEAD
-  gap: 8px;
-  text-decoration: none;
-  color: #333;
-  transition: transform 0.3s ease, color 0.3s ease;
-  padding: 16px;
-}
-
-.social-link span {
-  font-size: 15px;
-  font-weight: 500;
-=======
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-  color: var(--PinkOrchid);
->>>>>>> html
-}
-
-.social-link:hover {
-  transform: translateY(-5px);
-  color: #4169e1;
-<<<<<<< HEAD
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 16px 24px;
-  }
-
-  .nav-links {
-    gap: 24px;
-  }
-
-  .portfolio-title {
-    font-size: 22px;
-  }
-
-  .apresentacao-content {
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  .photo-circle {
-    width: 180px;
-    height: 180px;
-  }
-
-  .text-box {
-    padding: 32px;
-  }
-
-  .projetos-grid {
-    gap: 32px;
-  }
-
-  .contatos {
-    flex-wrap: wrap;
-    gap: 32px;
-  }
-}
 @media (min-width: 2560px) {
-  .logo {
-    font-size: 40px;
-  }
-
-  .portfolio-title {
-    font-size: 38px;
-  }
-
-  .nav-links a {
-    font-size: 24px;
-  }
-
-  .section-title {
-    font-size: 42px;
-    top: 80px;
+  .navbar {
+    padding: 0 120px;
   }
 
   .apresentacao-content {
-    gap: 500px;
+    max-width: 2000px;
+    gap: 100px;
+  }
+
+  .apresentacao-content-text h2 {
+    font-size: 70px;
   }
 
   .photo-circle {
     width: 500px;
+  }
+
+  .section-aboutme h2,
+  .section-projetos h2 {
+    font-size: 90px;
+  }
+
+  .card-aboutme {
+    max-width: 500px;
+    font-size: 22px;
+  }
+
+  .project-card {
+    max-width: 700px;
     height: 500px;
   }
-
-  .text-box {
-    width: 900px;
-    padding: 40px;
-  }
-
-  .text-box p {
-    font-size: 24px;
-  }
-
-  .projetos-subtitle {
-    font-size: 26px;
-    max-width: 800px;
-  }
-
-  .card-content {
-    width: 550px;
-    height: 550px;
-  }
-
-  .project-card h3 {
-    font-size: 28px;
-  }
 }
 
-@media (min-width: 1920px) and (max-width: 2559px) {
-  .logo {
-    font-size: 34px;
-  }
-
-  .portfolio-title {
-    font-size: 32px;
-  }
-
-  .nav-links a {
-    font-size: 21px;
-  }
-
-  .section-title {
-    font-size: 36px;
-  }
-
-  .apresentacao-content {
-    gap: 420px;
-  }
-
-  .photo-circle {
-    width: 440px;
-    height: 440px;
-  }
-
-  .text-box {
-    width: 800px;
-    padding: 30px;
-  }
-
-  .text-box p {
-    font-size: 20px;
-  }
-
-  .projetos-subtitle {
-    font-size: 22px;
-    max-width: 650px;
-  }
-
-  .card-content {
-    width: 480px;
-    height: 480px;
-  }
-
-  .project-card h3 {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 1440px) and (max-width: 1919px) {
-  .apresentacao-content {
-    gap: 280px;
-  }
-
-  .photo-circle {
-    width: 360px;
-    height: 360px;
-  }
-
-  .text-box {
-    width: 650px;
-  }
-
-  .card-content {
-    width: 400px;
-    height: 400px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (max-width: 1440px) {
   .navbar {
-    padding: 0 32px;
+    padding: 0 60px;
   }
 
-  .logo {
-    font-size: 26px;
+  .apresentacao-content {
+    gap: 50px;
+  }
+
+  .apresentacao-content-text h2 {
+    font-size: 48px;
+  }
+
+  .photo-circle {
+    width: 350px;
+  }
+
+  .section-aboutme h2,
+  .section-projetos h2 {
+    font-size: 60px;
+  }
+
+  .card-aboutme {
+    max-width: 360px;
+  }
+
+  .project-card {
+    max-width: 550px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 40px;
   }
 
   .portfolio-title {
@@ -709,52 +548,55 @@ AQUI COMEÇA A MAIN
     font-size: 17px;
   }
 
-  .section-title {
-    font-size: 26px;
+  .apresentacao-content {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
   }
 
-  .apresentacao-content {
-    gap: 180px;
+  .apresentacao-content-text {
+    text-align: center;
+  }
+
+  .apresentacao-content-text h2 {
+    font-size: 42px;
   }
 
   .photo-circle {
     width: 300px;
-    height: 300px;
   }
 
-  .text-box {
-    width: 550px;
-    padding: 18px;
+  .apresentacao-content-text-contact {
+    justify-content: center;
   }
 
-  .text-box p {
-    font-size: 16px;
+  .section-aboutme h2,
+  .section-projetos h2 {
+    font-size: 50px;
   }
 
-  .projetos-subtitle {
-    font-size: 18px;
+  .card-area {
+    gap: 30px;
+  }
+
+  .card-aboutme {
+    max-width: 320px;
+    font-size: 17px;
+  }
+
+  .project-card {
     max-width: 480px;
-    margin-bottom: 80px;
+    height: 320px;
   }
 
-  .card-content {
-    width: 360px;
-    height: 360px;
-  }
-
-  .project-card h3 {
-    font-size: 18px;
-  }
-
-  .contatos {
-    gap: 36px;
+  .card-content-title h3 {
+    font-size: 26px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 768px) {
   .navbar {
     padding: 0 24px;
-    height: 55px;
   }
 
   .logo {
@@ -762,259 +604,97 @@ AQUI COMEÇA A MAIN
   }
 
   .portfolio-title {
-    font-size: 22px;
+    font-size: 20px;
+    display: none;
   }
 
   .nav-links {
-    gap: 20px;
+    display: none;
   }
 
-  .nav-links a {
-    font-size: 16px;
+  .nav-links.active {
+    display: flex;
   }
 
-  .section-title {
-    font-size: 24px;
-    top: 55px;
+  .mobile-menu-toggle {
+    display: flex;
   }
 
-  .apresentacao-content {
-    flex-direction: column;
-    gap: 60px;
+  .apresentacao-content-text h2 {
+    font-size: 36px;
+  }
+
+  .apresentacao-subtitle {
+    font-size: 18px;
   }
 
   .photo-circle {
-    width: 280px;
-    height: 280px;
+    width: 250px;
   }
 
-  .text-box {
-    width: 90%;
-    max-width: 600px;
-    padding: 24px;
+  .section-aboutme h2,
+  .section-projetos h2 {
+    font-size: 42px;
   }
 
-  .text-box p {
-    font-size: 16px;
+  .card-area {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .projetos-subtitle {
-    font-size: 18px;
-    max-width: 90%;
-    margin-bottom: 60px;
-  }
-
-  .projetos-grid {
-    gap: 48px;
+  .card-aboutme {
+    max-width: 500px;
     width: 90%;
   }
 
-  .card-content {
-    width: 340px;
-    height: 340px;
+  .project-grid {
+    gap: 30px;
   }
 
-  .project-card h3 {
+  .project-card {
+    max-width: 500px;
+    height: 300px;
+  }
+
+  .project-subtitle {
     font-size: 18px;
-  }
-
-  .contatos {
-    gap: 32px;
-    padding: 0 24px;
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (max-width: 425px) {
   .navbar {
-    padding: 0 20px;
-    height: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 0 16px;
+    height: 56px;
   }
 
   .logo {
     font-size: 20px;
   }
 
-  .portfolio-title {
-    font-size: 20px;
-    position: relative;
-    left: 0;
-    transform: none;
-    margin-top: 8px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links {
-    gap: 16px;
-    width: 100%;
-    justify-content: center;
-    margin-top: 8px;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-  }
-
-  .section-title {
-    font-size: 22px;
-    top: 50px;
+  .section-apresentacao,
+  .section-aboutme,
+  .section-projetos {
+    padding: 70px 16px 60px;
   }
 
   .apresentacao-content {
-    flex-direction: column;
-    gap: 40px;
-    padding: 0 20px;
+    gap: 30px;
+  }
+
+  .apresentacao-content-text h2 {
+    font-size: 32px;
+  }
+
+  .apresentacao-subtitle {
+    font-size: 16px;
   }
 
   .photo-circle {
     width: 220px;
-    height: 220px;
   }
 
-  .text-box {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .text-box p {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .projetos-subtitle {
-    font-size: 17px;
-    max-width: 95%;
-    margin-bottom: 50px;
-    padding: 0 20px;
-  }
-
-  .projetos-grid {
-    gap: 40px;
-    width: 95%;
-  }
-
-  .card-content {
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-  }
-
-  .project-card h3 {
-    font-size: 17px;
-  }
-
-  .contatos {
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 16px 20px;
-  }
-
-  .social-link {
-    padding: 12px;
-  }
-}
-
-@media (min-width: 376px) and (max-width: 480px) {
-  .navbar {
-    padding: 12px 16px;
-    height: auto;
-    flex-direction: column;
+  .apresentacao-content-text-contact {
     gap: 12px;
-  }
-
-  .logo {
-    font-size: 18px;
-  }
-
-  .portfolio-title {
-    font-size: 18px;
-    position: relative;
-    left: 0;
-    transform: none;
-  }
-
-  .nav-links {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-  }
-
-  .section-title {
-    font-size: 20px;
-    top: 90px;
-  }
-
-  .section {
-    padding-top: 100px;
-  }
-
-  .apresentacao-content {
-    flex-direction: column;
-    gap: 32px;
-    padding: 0 16px;
-  }
-
-  .photo-circle {
-    width: 180px;
-    height: 180px;
-  }
-
-  .text-box {
-    width: 100%;
-    padding: 16px;
-  }
-
-  .text-box p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  .arrow-down {
-    bottom: 20px;
-  }
-
-  .arrow-down svg {
-    width: 40px;
-    height: 40px;
-  }
-
-  .projetos-subtitle {
-    font-size: 16px;
-    max-width: 100%;
-    margin-bottom: 40px;
-    padding: 0 16px;
-  }
-
-  .projetos-grid {
-    gap: 32px;
-    width: 100%;
-  }
-
-  .card-content {
-    width: 280px;
-    height: 280px;
-    border-radius: 20px;
-  }
-
-  .project-card h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
-  }
-
-  .contatos {
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 16px;
-  }
-
-  .social-link {
-    padding: 10px;
   }
 
   .social-link svg {
@@ -1022,110 +702,106 @@ AQUI COMEÇA A MAIN
     height: 26px;
   }
 
-  .social-link span {
-    font-size: 13px;
+  .section-aboutme h2,
+  .section-projetos h2 {
+    font-size: 36px;
+  }
+
+  .card-aboutme {
+    font-size: 16px;
+    padding: 24px;
+    min-height: 320px;
+  }
+
+  .card-aboutme h3 {
+    font-size: 22px;
+  }
+
+  .card-aboutme-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .card-aboutme-icon svg {
+    transform: scale(1.5);
+  }
+
+  .project-card {
+    height: 260px;
+  }
+
+  .card-content-title h3 {
+    font-size: 24px;
+  }
+
+  .project-subtitle {
+    font-size: 16px;
+  }
+
+  .arrow-down svg {
+    width: 40px;
+    height: 40px;
   }
 }
 
 @media (max-width: 375px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .apresentacao-content-text h2 {
+    font-size: 28px;
+  }
+
+  .photo-circle {
+    width: 200px;
+  }
+
+  .section-aboutme h2,
+  .section-projetos h2 {
+    font-size: 32px;
+  }
+
+  .card-aboutme {
+    font-size: 15px;
+    padding: 20px;
+  }
+
+  .project-card {
+    height: 240px;
+  }
+
+  .card-content-title h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 320px) {
   .navbar {
-    padding: 10px 12px;
-    height: auto;
-    flex-direction: column;
-    gap: 10px;
+    padding: 0 12px;
+    height: 52px;
   }
 
   .logo {
     font-size: 16px;
   }
 
-  .portfolio-title {
-    font-size: 16px;
-    position: relative;
-    left: 0;
-    transform: none;
+  .section-apresentacao,
+  .section-aboutme,
+  .section-projetos {
+    padding: 60px 12px 50px;
   }
 
-  .nav-links {
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+  .apresentacao-content-text h2 {
+    font-size: 26px;
   }
 
-  .nav-links a {
-    font-size: 12px;
-  }
-
-  .section-title {
-    font-size: 18px;
-    top: 85px;
-  }
-
-  .section {
-    padding-top: 95px;
-  }
-
-  .apresentacao-content {
-    flex-direction: column;
-    gap: 24px;
-    padding: 0 12px;
+  .apresentacao-subtitle {
+    font-size: 15px;
   }
 
   .photo-circle {
-    width: 150px;
-    height: 150px;
-  }
-
-  .text-box {
-    width: 100%;
-    padding: 14px;
-  }
-
-  .text-box p {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .arrow-down {
-    bottom: 16px;
-  }
-
-  .arrow-down svg {
-    width: 35px;
-    height: 35px;
-  }
-
-  .projetos-subtitle {
-    font-size: 15px;
-    max-width: 100%;
-    margin-bottom: 32px;
-    padding: 0 12px;
-  }
-
-  .projetos-grid {
-    gap: 28px;
-    width: 100%;
-  }
-
-  .card-content {
-    width: 240px;
-    height: 240px;
-    border-radius: 15px;
-  }
-
-  .project-card h3 {
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
-
-  .contatos {
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 12px;
-  }
-
-  .social-link {
-    padding: 8px;
+    width: 180px;
   }
 
   .social-link svg {
@@ -1133,10 +809,57 @@ AQUI COMEÇA A MAIN
     height: 24px;
   }
 
-  .social-link span {
-    font-size: 12px;
+  .section-aboutme h2,
+  .section-projetos h2 {
+    font-size: 28px;
+  }
+
+  .section-aboutme {
+    gap: 40px;
+  }
+
+  .card-aboutme {
+    font-size: 14px;
+    padding: 18px;
+    min-height: 300px;
+  }
+
+  .card-aboutme h3 {
+    font-size: 20px;
+  }
+
+  .card-aboutme-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card-aboutme-icon svg {
+    transform: scale(1.3);
+  }
+
+  .project-card {
+    height: 220px;
+  }
+
+  .card-content-title {
+    padding: 16px;
+  }
+
+  .card-content-title h3 {
+    font-size: 20px;
+  }
+
+  .project-subtitle {
+    font-size: 15px;
+  }
+
+  .arrow-down svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer {
+    padding: 1.5rem 12px;
+    font-size: 14px;
   }
 }
-=======
-}
->>>>>>> html
